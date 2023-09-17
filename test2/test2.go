@@ -12,7 +12,7 @@ func main() {
 	//golang.PrintNbr(123)
 	//golang.IsNegative(0)
 	//golang.IsNegative(-1)
-	arg := 100
+	arg := 40
 	//fmt.Println(golang.RecursiveFactorial(arg))
 	fmt.Println(exercices.IterativeFactorial(arg))
 	//fmt.Println(golang.RecursivePower(2, 4)
