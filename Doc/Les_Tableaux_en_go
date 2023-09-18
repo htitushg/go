@@ -1,0 +1,92 @@
+Code exemple
+Analyser dans votre tête le code suivant. On crée un slice puis un slice de slice et on modifie et ajoute des valeurs.
+Concentrez-vous sur la dernière instruction. Qu’affiche s1 et s2 ?
+
+
+
+1 package main
+2
+​3 import (
+4    "fmt"
+5 )
+6
+7 func main() {
+8     s1 := make([]int, 3, 4)
+9     fmt.Println("s1:", s1)
+10    s2 := s1[1:2]
+11    fmt.Println("s2:", s2)
+12​
+13    fmt.Println("# s2[0] = 1")
+14    s2[0] = 1
+15    fmt.Println("s1:", s1)
+16    fmt.Println("s2:", s2)
+17​
+18    fmt.Println("# append(s2, 2)")
+19    s2 = append(s2, 2)
+20    fmt.Println("s1:", s1)
+21    fmt.Println("s2:", s2)
+22​
+23    fmt.Println("# s2[1] = 9")
+24    s2[1] = 9
+25    fmt.Println("s1:", s1)
+26    fmt.Println("s2:", s2)
+27​
+28    fmt.Println("# append(s2, 3)")
+29    s2 = append(s2, 3)
+30    fmt.Println("s1:", s1)
+31    fmt.Println("s2:", s2)
+32​
+33    fmt.Println("# s2[1] = 8")
+34    s2[1] = 8
+35    fmt.Println("s1:", s1)
+36    fmt.Println("s2:", s2)
+37​
+38    fmt.Println("# append(s2, 4)")
+39    s2 = append(s2, 4)
+40    fmt.Println("s1:", s1)
+41    fmt.Println("s2:", s2)
+42​
+43    fmt.Println("# s2[1] = 7")
+44    s2[1] = 7
+45    fmt.Println("s1:", s1)
+46    fmt.Println("s2:", s2)
+47 }
+
+Voici la sortie
+
+s1: [0 0 0]
+s2: [0]
+# s2[0] = 1
+s1: [0 1 0]
+s2: [1]
+# append(s2, 2)
+s1: [0 1 2]
+s2: [1 2]
+# s2[1] = 9
+s1: [0 1 9]
+s2: [1 9]
+# append(s2, 3)
+s1: [0 1 9]
+s2: [1 9 3]
+# s2[1] = 8
+s1: [0 1 8]
+s2: [1 8 3]
+# append(s2, 4)
+s1: [0 1 8]
+s2: [1 8 3 4]
+# s2[1] = 7
+s1: [0 1 8]
+s2: [1 7 3 4]
+
+Explication
+Pourquoi la dernière modification à 7 n’est effective que sur s2 ?
+
+Pour comprendre l’explication, il faut revenir au support des slices : les tableaux.
+En Go, les slices sont « supportés » par des tableaux et lors de la création du slice s1, nous avons spécifié un slice de capacité 4 (ligne 8), Go a donc créé un tableau support de 4 espaces mémoire pour des types int.
+Le slice s2 provenant du slice s1, il utilise le même tableau en interne mais lors de l’ajout de la ligne 39, ce tableau n’est plus assez grand pour supporter un cinquième élément (Liloo multi-pass), Go réserve donc un tableau plus grand, recopie les 4 premiers éléments et insère le cinquième dans le nouveau tableau.
+
+s1 utilise le tableau original mais s2 utilise maintenant un second tableau, plus grand. Lors de la modification de s2 à la ligne 44, seul le second tableau est affecté. L’affichage de s1 ne reflète donc pas cette modification et c’est normal.
+
+Bien subtil, n’est-ce pas ?
+
+
