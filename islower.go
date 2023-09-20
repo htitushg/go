@@ -1,5 +1,6 @@
 package exercices
 
+// Renvoie true si s(string) ne contient que des caractères en minuscule
 func IsLower(s string) bool {
 	phrase := []rune(s)
 	estminuscule := true

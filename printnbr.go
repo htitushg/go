@@ -1,5 +1,6 @@
 package exercices
 
+// Affiche 0(rune) si n(int)=0, sinon -n (runes)
 import (
 	"github.com/01-edu/z01"
 )

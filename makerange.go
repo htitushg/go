@@ -1,23 +1,18 @@
 package exercices
 
-//func remove(s []int, i int) []int {
-//    s[i] = s[len(s)-1]
-//    return s[:len(s)-1]
-//}
+// Renvoie dan un tableau d'entiers les nombres de min(int) à max(int) non compris
 
-func MakeRange(min, max int) []int{
-	if max<min{
+func MakeRange(min, max int) []int {
+	if max < min {
 		return nil
-	}else{
+	} else {
 		n1 := make([]int, max-min)
-		minimum:=min
-		//const taille = 50
-		//var n1 [taille]int
-		for i:=min;i<max;i++{
+		minimum := min
+		for i := min; i < max; i++ {
 			n1[i-minimum] = min
 			min++
 		}
 		return n1
-	}	
-	
+	}
+
 }

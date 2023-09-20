@@ -72,8 +72,29 @@ func main() {
 	//test2:="Hello how are you? bonjour"
 	//fmt.Println(test2)
 	//exercices.PrinWordsTables(exercices.SplitWhiteSpaces(test2))
-	s:="HelloHAhowHAareHAyou?"
-	fmt.Printf("%#v\n",exercices.Split(s, "HA") )
+	//s := "HelloHAhowHAareHAyou?HABonjour"
+	//fmt.Printf("s[23:29]: %v", s[23:29])
+	//fmt.Printf("%#v\n", exercices.Index(s[23:29], "HA"))
+	//fmt.Printf("%#v\n", exercices.Split(s, "HA"))
+
+	//a := []int{1, 2, 3, 4, 5, 6}
+	//fmt.Println(exercices.Map(exercices.IsPrime, a))
+
+	//a1 := []string{"Hello", "how", "are", "you"}
+	//a2 := []string{"This", "is", "4", "you"}
+	//fmt.Println(exercices.Any(exercices.IsNumeric, a1))
+	//fmt.Println(exercices.Any(exercices.IsNumeric, a2))
+
+	//tab1 := []string{"Hello", "how", "are", "you"}
+	//tab2 := []string{"This", "1", "is", "4", "you"}
+	//fmt.Println(exercices.CountIf(exercices.IsNumeric, tab1))
+	//fmt.Println(exercices.CountIf(exercices.IsNumeric, tab2))
+
+	a3 := []int{1, 2, 3, 4, 5}
+	a4 := []int{0, 2, 1, 3}
+	result1 := exercices.IsSorted(exercices.CompareInt, a3)
+	result2 := exercices.IsSorted(exercices.CompareInt, a4)
+	fmt.Println(result1)
+	fmt.Println(result2)
 
 }
-

@@ -1,5 +1,6 @@
 package exercices
 
+// Renvoie true si la chaine s(string) ne contient que des caractères en majuscule, sinon false
 func IsUpper(s string) bool {
 	phrase := []rune(s)
 	estmajuscule := true

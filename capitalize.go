@@ -1,5 +1,6 @@
 package exercices
 
+// Renvoie dans une string tous les mots contenus dans s avec la première lettre de chaque mot en majuscule
 import "fmt"
 
 func Capitalize(s string) string {

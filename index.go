@@ -1,6 +1,6 @@
 package exercices
 
-// Recherche la 1ère occurence d'une lettre dans s et renvoie l'index de cette lettre
+// Recherche la 1ère occurence d'une chaine dans s et renvoie l'index de cette lettre
 func Index(s string, tofind string) int {
 	phrase := []rune(s)
 	mot := []rune(tofind)

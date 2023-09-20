@@ -1,5 +1,6 @@
 package exercices
 
+// Renvoie true si la chaine s ne contient que des caractères alphanumériques, sinon false
 func IsAlpha(s string) bool {
 	phrase := []rune(s)
 	estalpha := true

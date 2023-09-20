@@ -1,8 +1,6 @@
 package exercices
-import "fmt"
 
-// Recherche la 1ère occurence d'une lettre dans s et renvoie l'index de cette lettre
-func ConcatParams(args [] string) string {
-	fmt.Printf("Le tableau entré est : %v\n",args)
+// Renvoie dans une string les strings contenus dans le tableau args, séparés par "\n"
+func ConcatParams(args []string) string {
 	return Join(args, "\n")
 }

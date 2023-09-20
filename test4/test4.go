@@ -6,9 +6,9 @@ import (
 
 // Structure de l'automate
 type Automate struct {
-text string
-pattern string
-nextState [][]int
+	text      string
+	pattern   string
+	nextState [][]int
 }
 
 // Initialisation de l'automate
@@ -22,7 +22,7 @@ func NewAutomate(text, pattern string) *Automate {
 
 	nextState[0][pattern[0]] = 1
 	x := 0
-	for  j := 1; j < m+1; j++ {
+	for j := 1; j < m+1; j++ {
 		for c := 0; c < 256; c++ {
 			nextState[j][c] = nextState[x][c]
 		}

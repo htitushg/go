@@ -1,5 +1,6 @@
 package exercices
 
+// Renvoie true si la chaine s(string) ne contient que des caractères numériques, sinon false
 func IsNumeric(s string) bool {
 	phrase := []rune(s)
 	estnumerique := true

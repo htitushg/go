@@ -2,6 +2,7 @@ package exercices
 
 import "github.com/01-edu/z01"
 
+// Affiche les nombres de 3 chiffres séparés par ", " avec le 1er chiffre < au second < au troisième
 func PrintComb() {
 	for i := 0; i < 8; i++ {
 		for j := i + 1; j < 9; j++ {

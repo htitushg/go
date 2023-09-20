@@ -2,6 +2,7 @@ package exercices
 
 import "github.com/01-edu/z01"
 
+// Affiche toutes les combinaisons de 2 nombres de 2 chiffres séparés par "espace" et suivi de ",espace" avec le 1er nombre < au second
 func PrintComb2() {
 	x := 0
 	for i := 0; i < 10; i++ {
