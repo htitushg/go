@@ -22,7 +22,7 @@ func Split(s, sep string) []string {
 			y++
 		} else {
 			if i < len(s) {
-				tableau = append(tableau, s[i:len(s)])
+				tableau = append(tableau, s[i:])
 				return tableau
 			}
 		}

@@ -6,10 +6,10 @@ import (
 	"strings"
 )
 
-const (
-	phrase = "something"
-	mot    = "some"
-)
+//const (
+//	phrase = "something"
+//	mot    = "some"
+//)
 
 func RechercheMot(phrase, mot string) int {
 	// 1. Contains
