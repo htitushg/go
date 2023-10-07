@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	//result := []string{"zaaa", "babab", "B", "1", "B1 MarketCom", "baba", "babaa", "baca", "b", "A", "2", "c", "C", "3", "azzz", "B1 Info"}
 	//fmt.Println(result)
@@ -93,13 +91,12 @@ func main() {
 	//fmt.Printf("Mon nombre (base 8) est %o\n", x)
 	//fmt.Printf("Mon nombre (base 10) est %d\n", x)
 	//fmt.Printf("Mon nombre (base 16) est %X\n", x)
-//
+	//
 	//fmt.Printf("La valeur de X est égale à la valeur de Y %t\n", x > y)
 	//fmt.Printf("L'écriture scientifique de 1258,97682 -> %E\n", 1258.97682)
-
-	// Pass par valeur
-	func updateA(number int){
-		number =5
-	}
-
 }
+
+//// Pass par valeur
+//func updateA(number int) {
+//	number = 5
+//}

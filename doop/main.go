@@ -121,18 +121,10 @@ func main() {
 					printNbr(trimAtoi(os.Args[1]) - trimAtoi(os.Args[3]))
 				} else if os.Args[2] == "*" {
 					printNbr(trimAtoi(os.Args[1]) * trimAtoi(os.Args[3]))
-				} else if os.Args[2] == "/" {
-					if os.Args[3] == "0" {
-						os.Stdout.Write([]byte("No division by 0"))
-					} else {
-						printNbr(trimAtoi(os.Args[1]) / trimAtoi(os.Args[3]))
-					}
-				} else if os.Args[2] == "%" {
-					if os.Args[3] == "0" {
-						os.Stdout.Write([]byte("No modulo by 0"))
-					} else {
-						printNbr(trimAtoi(os.Args[1]) % trimAtoi(os.Args[3]))
-					}
+				} else if os.Args[3] == "0" {
+					os.Stdout.Write([]byte("No division by 0 | no modulo by 0"))
+				} else {
+					printNbr(trimAtoi(os.Args[1]) / trimAtoi(os.Args[3]))
 				}
 				printRunes('\n')
 			}
